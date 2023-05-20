@@ -1,1 +1,1 @@
-This is a blog site Replica. 
+A blog site Replica. 

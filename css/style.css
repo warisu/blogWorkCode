@@ -1,6 +1,8 @@
-body {
+* {
     margin: 0;
-} 
+    padding: 0;
+    box-sizing: border-box;
+}
 .capitalize {
     text-transform: capitalize;
 }
@@ -81,6 +83,11 @@ p {
    width: 31.33%;
    float: left; 
    margin: 8px;
+   object-fit: cover;
+}
+nav input[type="checkbox"],
+nav .hamburger-lines {
+    display: none;
 }
 .travel {
     background-image: url('../img/travel.jpg');
@@ -115,14 +122,6 @@ p {
     border-left: 1px solid rgb(226, 226, 226, 0.25);
     border-bottom: 1px solid rgb(226, 226, 226, 0.25);
 }
-/* .post container {  
-    padding-left: 10px;
-    max-width: 100%;
-    display: flex;
-    flex-direction: column;
-    font-size: 12px;
-
-} */
 .postContainer { 
     margin-left: auto;
     margin-right: auto;
@@ -167,6 +166,7 @@ p {
 .aboutContactCopyright {
     background-color: grey;
 }
+
 .col {
     width: 20%;
     height: 250px;
@@ -228,8 +228,63 @@ h1 {
     margin-top: 160px;
     margin-bottom: 40px;
 }
-/* .contact, .aboutUs { 
-    margin: 0.5%;
-    padding: 45px;
-    padding-bottom: 
+/* medium-sized devices */
+@media (max-width: 768px) {
+    .banner {
+        max-width: 750px;
+        max-height: 500px;
+    }
+
+    .column {
+        width: 28%;
+    }
+
+    .featured {
+        height: auto;
+        line-height: none;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    nav input[type="checkbox"] {
+        position: absolute;
+        display: block;
+        height: 32px;
+        width: 30px;
+        top: 20px;
+        left: 20px;
+        z-index: 5;
+        opacity: 0;
+    }
+
+    nav {
+        opacity: 0.95;
+    }
+
+    nav input[type="checkbox"],
+    nav .hamburger-lines {
+        display: block;
+    }
+
+    nav .hamburger-lines {
+        display: block;
+        height: 23px;
+        width: 35px;
+        position: absolute;
+        top: 17px;
+        left: 20px;
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+}
+
+/* Smaller-sized devices */
+@media (max-width: 479px) {
+    
 }
